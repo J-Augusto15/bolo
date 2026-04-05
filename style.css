@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap');
+
+:root {
+    --main-color: rgb(243, 241, 240);
+    --black: #010103;
+    --border: 0.1rem solid rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/*scroll suave*/
+html {
+    scroll-behavior: smooth;
+}
+
+/* BODY */
+body {
+    background-color: var(--main-color);
+    height: 300vh;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+/* HEADER FIXO */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    gap: 3rem;
+    align-items: center;
+
+    height: 60px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 0 2rem;
+}
+
+.barrinha {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 310px;
+}
+
+/* ICONES */
+.icons-1 {
+    width: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.icons-1:hover {
+    transform: scale(1.2);
+}
+
+/* LINKS */
+.navbar a {
+    color: var(--black);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* HOVER BONITO */
+.navbar a:hover {
+    transform: scale(1.2);
+}
+
+/* HOME */
+.home {
+    height: 100vh;
+
+    background-image: url("Logo\ digital\ de\ confeitaria\ delicada\ mais\ embaçado.png");
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    padding-top: 80px;
+    /* espaço por causa do header */
+}
+
+.logo{
+    width: 50px;
+    cursor: pointer;
+}
+/* TEXTOS */
+.tittle-home {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    margin-top: 5rem;
+}
+
+.tittle-home2 {
+    font-size: 3rem;
+    margin-left: 2rem;
+}
+
+/* BOTÃO */
+.butao {
+    background-color: rgb(252, 183, 55);
+    border: var(--border);
+    border-radius: 5rem;
+    padding: 1rem 2rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.butao:hover {
+    background-color: rgb(255, 166, 0);
+    transform: scale(1.1);
+}
+/* BOTÃO 2 */
+.butao2 {
+    display: flex;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    border: var(--border);
+    border-radius: 5rem;
+    padding: 1rem 2rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+
+    text-decoration: none;
+}
+
+.butao2:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/*MENU*/
+.menu-escondido {
+    font-size: 0px;
+}
+
+.produtos {
+    padding: 50px;
+    background: #f5f5f5;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    transition: 0.3s;
+}
+
+.card1 {
+    min-width: 250px;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.card {
+    min-width: 250px;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+
+.card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.card img:hover {
+    transform: scale(1.2);
+}
+
+/*Sobre*/
+.sobre-escondido {
+    font-size: 3rem;
+    margin-top: 10rem;
+}
+
+.sobre{
+    font-size: 1.5rem;
+    margin-left: 10px;
+    border: var(--border);
+    border-radius: 1rem;
+}
+
+/**!TELA DO CELULAR**/
+@media (max-width: 768px) {
+    .navbar {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .home {
+    background-position: center;
+    width: 100%;
+}
+
+    .tittle-home, .tittle-home2 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .butao, .butao2 {
+        display: block;
+        margin: 1rem auto;
+    }
+
+    .carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,30 +1,26 @@
-/* 
-const imagens = [
-    "imagens/bolo1.jpg",
-    "imagens/bolo2.jpg",
-    "imagens/bolo3.jpg",
-    "imagens/bolo4.jpg",
-    "imagens/bolo5.jpg"
-];
+const lupa = document.querySelector(".icons-1");
+const searchBox = document.querySelector(".search-box");
+const input = document.getElementById("searchInput");
 
-let indice = 0;
+// abrir ao clicar na lupa
+lupa.addEventListener("click", () => {
+    searchBox.classList.toggle("active");
+    input.focus();
+});
 
-function mostrarImagem() {
-    document.getElementById("slide").src = imagens[indice];
-}
+// ao apertar ENTER
+input.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        let valor = input.value.toLowerCase();
 
-function avancar() {
-    indice++;
-    if (indice >= imagens.length) {
-        indice = 0;
+        if (valor.includes("bolo") || valor.includes("doce") || valor.includes("menu") || valor.includes("mesversario") || valor.includes("Mêsversario")) {
+            document.getElementById("Menu").scrollIntoView({
+                behavior: "smooth"
+            });
+        } else if (valor.includes("sobre") || valor.includes("nós") || valor.includes("sobrenos") || valor.includes("nos")) {
+            document.getElementById("Sobre").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
     }
-    mostrarImagem();
-}
-
-function voltar() {
-    indice--;
-    if (indice < 0) {
-        indice = imagens.length - 1;
-    }
-    mostrarImagem();
-}
+});

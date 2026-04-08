@@ -295,3 +295,16 @@ section {
     }
     
 }
+
+@media (max-width: 740px) {
+    .butao{
+        width: 80%;
+        padding: 1.5rem;
+        font-size: 1rem;
+    }
+}
+@media (max-width: 915px) {
+    .butao{
+        font-size: 1.2rem;
+    }
+}
